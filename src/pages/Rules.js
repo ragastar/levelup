@@ -1,27 +1,13 @@
 import React from 'react';
 import {
-  Box,
   Container,
   Typography,
-  Paper,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
-  Divider,
-  useTheme,
-  Grid,
+  Paper,
+  Box,
 } from '@mui/material';
-import {
-  CheckCircle as CheckCircleIcon,
-  Group as GroupIcon,
-  Event as EventIcon,
-  Assignment as AssignmentIcon,
-  AttachMoney as AttachMoneyIcon,
-} from '@mui/icons-material';
-import { motion } from 'framer-motion';
-
-const MotionBox = motion(Box);
 
 const rules = [
   {
@@ -74,8 +60,6 @@ const rules = [
 ];
 
 function Rules() {
-  const theme = useTheme();
-
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Typography variant="h3" component="h1" gutterBottom align="center">

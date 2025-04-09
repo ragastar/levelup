@@ -8,15 +8,12 @@ import {
   Grid,
   Card,
   CardContent,
-  useTheme,
 } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
 
 function Home() {
-  const theme = useTheme();
-
   const features = [
     {
       title: 'Ежемесячные встречи',

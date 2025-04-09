@@ -7,7 +7,6 @@ import {
   Button,
   Paper,
   Grid,
-  useTheme,
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -15,7 +14,6 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 const MotionBox = motion(Box);
 
 function Contact() {
-  const theme = useTheme();
   const [formData, setFormData] = useState({
     name: '',
     email: '',

@@ -1,15 +1,12 @@
 import React from 'react';
 import {
-  Box,
   Container,
   Typography,
-  Grid,
-  Paper,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
-  useTheme,
+  Paper,
+  Box,
 } from '@mui/material';
 import {
   Group as GroupIcon,
@@ -70,8 +67,6 @@ const features = [
 ];
 
 function About() {
-  const theme = useTheme();
-
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Typography variant="h3" component="h1" gutterBottom align="center">

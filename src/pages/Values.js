@@ -6,7 +6,6 @@ import {
   Grid,
   Card,
   CardContent,
-  useTheme,
 } from '@mui/material';
 import { motion } from 'framer-motion';
 
@@ -41,8 +40,6 @@ const values = [
 ];
 
 function Values() {
-  const theme = useTheme();
-
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Typography variant="h3" component="h1" gutterBottom align="center">
