@@ -47,7 +47,7 @@ function Home() {
             transform: 'translateX(-50%)',
             width: '150px',
             height: '150px',
-            background: 'radial-gradient(circle, rgba(156, 39, 176, 0.2) 0%, rgba(18, 18, 18, 0) 70%)',
+            background: 'radial-gradient(circle, rgba(0, 188, 212, 0.2) 0%, rgba(26, 26, 46, 0) 70%)',
             borderRadius: '50%',
             zIndex: -1,
           },
@@ -59,18 +59,24 @@ function Home() {
           gutterBottom
           sx={{
             fontWeight: 700,
-            background: 'linear-gradient(45deg, #9c27b0 30%, #ffd700 90%)',
+            background: 'linear-gradient(45deg, #00BCD4 30%, #FF4081 90%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             mb: 2,
+            fontFamily: '"Playfair Display", serif',
           }}
         >
-          LEVELUP
+          BLUE OYSTER
         </Typography>
         <Typography
           variant="h4"
           color="text.secondary"
-          sx={{ mb: 4, maxWidth: 800 }}
+          sx={{ 
+            mb: 4, 
+            maxWidth: 800,
+            fontFamily: '"Playfair Display", serif',
+            fontStyle: 'italic',
+          }}
         >
           Элитное сообщество предпринимателей для взаимного роста и развития
         </Typography>
@@ -81,12 +87,12 @@ function Home() {
             variant="contained"
             size="large"
             sx={{
-              background: 'linear-gradient(45deg, #9c27b0 30%, #7b1fa2 90%)',
+              background: 'linear-gradient(45deg, #00BCD4 30%, #008BA3 90%)',
               color: 'white',
               px: 4,
               py: 1.5,
               '&:hover': {
-                background: 'linear-gradient(45deg, #7b1fa2 30%, #9c27b0 90%)',
+                background: 'linear-gradient(45deg, #008BA3 30%, #00BCD4 90%)',
               },
             }}
           >
@@ -98,13 +104,13 @@ function Home() {
             variant="outlined"
             size="large"
             sx={{
-              borderColor: '#ffd700',
-              color: '#ffd700',
+              borderColor: '#00BCD4',
+              color: '#00BCD4',
               px: 4,
               py: 1.5,
               '&:hover': {
-                borderColor: '#ffd700',
-                backgroundColor: 'rgba(255, 215, 0, 0.1)',
+                borderColor: '#62EFFF',
+                backgroundColor: 'rgba(0, 188, 212, 0.1)',
               },
             }}
           >
@@ -126,13 +132,14 @@ function Home() {
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
-                  background: 'linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%)',
-                  border: '1px solid rgba(255, 215, 0, 0.1)',
+                  background: 'linear-gradient(145deg, #16213E 0%, #1A1A2E 100%)',
+                  border: '1px solid rgba(0, 188, 212, 0.1)',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
-                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                  transition: 'all 0.3s ease-in-out',
                   '&:hover': {
                     transform: 'translateY(-8px)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)',
+                    boxShadow: '0 12px 40px rgba(0, 188, 212, 0.2)',
+                    border: '1px solid rgba(0, 188, 212, 0.3)',
                   },
                 }}
               >
@@ -143,13 +150,20 @@ function Home() {
                     gutterBottom
                     sx={{
                       fontWeight: 600,
-                      color: 'secondary.main',
+                      color: 'primary.main',
                       mb: 2,
+                      fontFamily: '"Playfair Display", serif',
                     }}
                   >
                     {feature.title}
                   </Typography>
-                  <Typography variant="body1" color="text.secondary">
+                  <Typography 
+                    variant="body1" 
+                    color="text.secondary"
+                    sx={{
+                      fontStyle: 'italic',
+                    }}
+                  >
                     {feature.description}
                   </Typography>
                 </CardContent>

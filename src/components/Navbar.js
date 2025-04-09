@@ -49,10 +49,14 @@ function Navbar() {
 
   return (
     <HideOnScroll>
-      <AppBar position="sticky" sx={{ 
-        background: 'linear-gradient(to right, #121212, #1e1e1e)',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-      }}>
+      <AppBar 
+        position="sticky" 
+        sx={{ 
+          background: 'linear-gradient(to right, #1A1A2E, #16213E)',
+          boxShadow: '0 4px 20px rgba(0, 188, 212, 0.2)',
+          borderBottom: '1px solid rgba(0, 188, 212, 0.1)',
+        }}
+      >
         <Container maxWidth="lg">
           <Toolbar disableGutters>
             <Typography
@@ -64,12 +68,30 @@ function Navbar() {
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
                 fontWeight: 700,
-                color: 'secondary.main',
+                color: 'primary.main',
                 textDecoration: 'none',
-                letterSpacing: '.1rem',
+                letterSpacing: '.2rem',
+                fontFamily: '"Playfair Display", serif',
+                position: 'relative',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  width: '100%',
+                  height: '2px',
+                  bottom: -4,
+                  left: 0,
+                  background: 'linear-gradient(to right, #00BCD4, #FF4081)',
+                  transform: 'scaleX(0)',
+                  transformOrigin: 'bottom right',
+                  transition: 'transform 0.3s ease-out',
+                },
+                '&:hover::after': {
+                  transform: 'scaleX(1)',
+                  transformOrigin: 'bottom left',
+                },
               }}
             >
-              LEVELUP
+              BLUE OYSTER
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -79,7 +101,7 @@ function Navbar() {
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
-                color="inherit"
+                sx={{ color: 'primary.main' }}
               >
                 <MenuIcon />
               </IconButton>
@@ -100,8 +122,9 @@ function Navbar() {
                 sx={{
                   display: { xs: 'block', md: 'none' },
                   '& .MuiPaper-root': {
-                    backgroundColor: '#1e1e1e',
-                    backgroundImage: 'linear-gradient(rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.9))',
+                    backgroundColor: '#16213E',
+                    backgroundImage: 'linear-gradient(rgba(22, 33, 62, 0.9), rgba(22, 33, 62, 0.9))',
+                    border: '1px solid rgba(0, 188, 212, 0.1)',
                   },
                 }}
               >
@@ -113,7 +136,7 @@ function Navbar() {
                     to={page.path}
                     sx={{
                       '&:hover': {
-                        backgroundColor: 'rgba(156, 39, 176, 0.1)',
+                        backgroundColor: 'rgba(0, 188, 212, 0.1)',
                       },
                     }}
                   >
@@ -132,12 +155,13 @@ function Navbar() {
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
                 fontWeight: 700,
-                color: 'secondary.main',
+                color: 'primary.main',
                 textDecoration: 'none',
-                letterSpacing: '.1rem',
+                letterSpacing: '.2rem',
+                fontFamily: '"Playfair Display", serif',
               }}
             >
-              LEVELUP
+              BLUE OYSTER
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
               {pages.map((page) => (
@@ -148,10 +172,11 @@ function Navbar() {
                   onClick={handleCloseNavMenu}
                   sx={{ 
                     mx: 1, 
-                    color: 'white', 
+                    color: 'text.primary', 
                     display: 'block',
                     position: 'relative',
-                    '&:after': {
+                    fontFamily: '"Playfair Display", serif',
+                    '&::after': {
                       content: '""',
                       position: 'absolute',
                       width: '0%',
@@ -159,12 +184,13 @@ function Navbar() {
                       bottom: 0,
                       left: '50%',
                       transform: 'translateX(-50%)',
-                      backgroundColor: 'secondary.main',
+                      background: 'linear-gradient(to right, #00BCD4, #FF4081)',
                       transition: 'width 0.3s ease-in-out',
                     },
                     '&:hover': {
                       backgroundColor: 'transparent',
-                      '&:after': {
+                      color: 'primary.main',
+                      '&::after': {
                         width: '80%',
                       },
                     },

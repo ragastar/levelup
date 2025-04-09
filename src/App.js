@@ -10,45 +10,49 @@ import Values from './pages/Values';
 import Rating from './pages/Rating';
 import Contact from './pages/Contact';
 
-// Create a dark theme with elegant colors
+// Create a theme inspired by Blue Oyster style
 const theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#9c27b0', // Purple
-      light: '#ba68c8',
-      dark: '#7b1fa2',
+      main: '#00BCD4', // Cyan
+      light: '#62EFFF',
+      dark: '#008BA3',
     },
     secondary: {
-      main: '#ffd700', // Gold
-      light: '#fff64f',
-      dark: '#c8a600',
+      main: '#FF4081', // Pink
+      light: '#FF79B0',
+      dark: '#C60055',
     },
     background: {
-      default: '#121212',
-      paper: '#1e1e1e',
+      default: '#1A1A2E',
+      paper: '#16213E',
     },
     text: {
-      primary: '#ffffff',
-      secondary: 'rgba(255, 255, 255, 0.7)',
+      primary: '#E6E6E6',
+      secondary: 'rgba(230, 230, 230, 0.7)',
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Playfair Display", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
       fontWeight: 700,
       letterSpacing: '0.02em',
+      fontFamily: '"Playfair Display", serif',
     },
     h2: {
       fontWeight: 600,
       letterSpacing: '0.01em',
+      fontFamily: '"Playfair Display", serif',
     },
     h3: {
       fontWeight: 600,
+      fontFamily: '"Playfair Display", serif',
     },
     button: {
       textTransform: 'none',
       fontWeight: 500,
+      fontFamily: '"Roboto", sans-serif',
     },
   },
   components: {
@@ -56,15 +60,24 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundImage: 'none',
-          borderRadius: 8,
+          borderRadius: 12,
+          border: '1px solid rgba(0, 188, 212, 0.1)',
         },
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 8,
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.25)',
+          borderRadius: 12,
+          background: 'linear-gradient(145deg, #16213E 0%, #1A1A2E 100%)',
+          border: '1px solid rgba(0, 188, 212, 0.1)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+          transition: 'all 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-8px)',
+            boxShadow: '0 12px 40px rgba(0, 188, 212, 0.2)',
+            border: '1px solid rgba(0, 188, 212, 0.3)',
+          },
         },
       },
     },
@@ -72,10 +85,26 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 8,
-          padding: '8px 24px',
+          padding: '10px 24px',
+          transition: 'all 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-2px)',
+          },
         },
         contained: {
-          boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
+          background: 'linear-gradient(45deg, #00BCD4 30%, #008BA3 90%)',
+          boxShadow: '0 4px 14px rgba(0, 188, 212, 0.3)',
+          '&:hover': {
+            background: 'linear-gradient(45deg, #008BA3 30%, #00BCD4 90%)',
+          },
+        },
+        outlined: {
+          borderColor: '#00BCD4',
+          color: '#00BCD4',
+          '&:hover': {
+            borderColor: '#62EFFF',
+            backgroundColor: 'rgba(0, 188, 212, 0.1)',
+          },
         },
       },
     },
