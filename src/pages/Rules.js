@@ -7,7 +7,19 @@ import {
   ListItemText,
   Paper,
   Box,
+  Grid,
+  Divider,
 } from '@mui/material';
+import {
+  CheckCircle as CheckCircleIcon,
+  Event as EventIcon,
+  Group as GroupIcon,
+  Assignment as AssignmentIcon,
+  AttachMoney as AttachMoneyIcon,
+} from '@mui/icons-material';
+import { motion } from 'framer-motion';
+
+const MotionBox = motion(Box);
 
 const rules = [
   {
